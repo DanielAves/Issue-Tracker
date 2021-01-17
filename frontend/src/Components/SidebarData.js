@@ -24,18 +24,6 @@ import * as RiIcons from 'react-icons/ri'
     
      
             subNav: [
-
-                 
-                // {
-                //     title: 'Project1', 
-                //     path: '/project1', 
-                //     icon: <AiIcons.AiFillHome/>, 
-                // },
-                // {
-                //     title: 'Project2', 
-                //     path: '/project2', 
-                //     icon: <AiIcons.AiFillHome/>, 
-                // },
             ]
         },
         {

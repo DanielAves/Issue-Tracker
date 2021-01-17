@@ -7,8 +7,12 @@ import * as AiIcons from 'react-icons/ai'
 import * as FaIcons from 'react-icons/fa' 
 import SubMenu from './Submenu';
 import { IconContext } from 'react-icons/lib';
-import {FetchData} from './FetchData'
-const url = 'http://127.0.0.1:8000/api/ticket-list/'
+import {FetchData} from './FetchData';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom' 
+import Dashboard from '../pages/Dashboard'; 
+import Project from '../pages/Project'; 
+const url = 'http://127.0.0.1:8000/api/ticket-list/';
+
 
 const Nav = styled.div`
     background: #15171c; 
@@ -71,6 +75,14 @@ const Sidebar = () => {
                 </SidebarWrap>
             </SidebarNav>
         </IconContext.Provider>
+{/* 
+        <Switch> 
+            <Route path="/dashboard" exact component={Dashboard} />
+            <Route path="/projects" exact component={Project} />
+
+        </Switch>  */}
+
+
         </> 
 
     );

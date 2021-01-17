@@ -9,16 +9,15 @@ import {FetchData} from './Components/FetchData'
 const url = 'http://127.0.0.1:8000/api/ticket-list/'
 
 function App() {
-  // const { loading, products } = FetchData(url)
-  // console.log(products)
-
 
   return (
     <Router> 
       <Sidebar />
       <Switch> 
         <Route path="/dashboard" exact component={Dashboard} />
-        <Route path="/project" exact component={Project} />
+        <Route path='/project/:id'> 
+          <Project /> 
+         </Route> 
 
       </Switch> 
     </Router>

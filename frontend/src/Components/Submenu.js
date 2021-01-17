@@ -58,17 +58,8 @@ const SubMenu = ({item, projects}) => {
     const [subnav, setSubnav] = useState(false) 
     const showSubnav = () => setSubnav(!subnav) 
 
-    // const {loading, products } = FetchData(url)
-     
-
-
-
-
-
-
     return (
         <>
-        
             <SidebarLink to={item.path} onClick ={item.subNav && showSubnav}>
                 <div>
                     {item.icon} 
@@ -82,21 +73,12 @@ const SubMenu = ({item, projects}) => {
                         : null}
                 </div> 
             </SidebarLink>
-            {/* Logic to determine whether there are projects to list  */}
 
-
-           {/* console.log({projects})
-           {projects && projects.map((project) =>{
-               return( 
-                   console.log("here")
-               )
-           })} */}
-            {item.title == "Projects" && subnav &&projects.map((project, index) =>{
-                return(
-                    <DropdownLink to={'project' + project.id} key={index}>
+            {item.title == "Projects" && subnav && projects.map((project, index) =>{
+                return(              
+                    <DropdownLink to={''} to={`/project/${project.id}`} key={index}>
                     <SidebarLabel>
                         <DropdownIcon><AiIcons.AiFillProject/> </DropdownIcon>
-                        
                         {project.title}
                     </SidebarLabel>
                     </DropdownLink> 
